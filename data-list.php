@@ -14,7 +14,7 @@
         
         <?php require 'login.php';?>
     </div>
-        <h1>Data</h1>
+    <div class="tree" id="tree">
         <?php $Data->outTreeLight(0,0);?>
     </div>
 </body>
