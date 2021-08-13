@@ -1,3 +1,6 @@
+<?php 
+//session_start();?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,17 +11,20 @@
 </head>
 <body>
     <main>
-        <div class="login__title">
-            <h1>Страница авторизации</h1>
+        <div class="login">
+            <div class="login__title">
+                <h2>Авторизация</h2>
+            </div>
+            <div class="login__form">
+                <form id="form_login" action="">
+                    <input type="text" name="login" placeholder="Login">
+                    <input type="text" name="pass" placeholder="Password">
+                    <button class="btn btn-submit" type="submit">LogIn</button>
+                </form>
+            </div>
+            <div id="message"></div>
         </div>
-        <div class="login__form">
-            <form id="login_form" action="">
-                <input type="text" placeholder="Login">
-                <input type="text" placeholder="Password">
-                <button class="btn-submit" type="submit">LogIn</button>
-            </form>
-        </div>
+        
     </main>
-    
 </body>
 </html>
