@@ -35,8 +35,8 @@ $all_data = $Data->getAll();
     <div>
         <h1> Admin Page</h1>
     </div>
-    <div class="tree" id="tree">
     <div class='btn-create'  id='btn_create' onclick='createData(0)'>Добавить</div>
+    <div class="tree" id="tree">
         <?php $Data->outTree(0,0);?>
     </div>
     <div class="modal-wrapper hidden" id="modal_delete">

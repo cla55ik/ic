@@ -27,11 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
     
     
     
+    if(btnLogin){
+        btnLogin.addEventListener('click', function (e){
+            document.getElementById('login_form').classList.toggle('hidden');
+        })
+    }
     
-    btnLogin.addEventListener('click', function (e){
-        console.log('asd');
-        document.getElementById('login_form').classList.toggle('hidden');
-    })
 
     const formLogin = document.getElementById('form_login');
     
@@ -63,15 +64,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     let tree = document.getElementById('tree');
     
-    for (let li of tree.querySelectorAll('li')) {
-          let span = document.createElement('span');
-          li.prepend(span);
-          span.append(span.nextSibling); // поместить текстовый узел внутрь элемента <span>
-        }
-    
+       
         //  ловим клики на всём дереве
         tree.onclick = function(event) {
-            console.log("clock");
           if (event.target.tagName != 'SPAN') {
             return;
             

@@ -112,10 +112,11 @@ form#form_login input{
   ul li { list-style-type: none; }
 
   li {
+      display: inline-block;
       font-size: 22px;
       margin-top: 10px;
       /* border-top:1px solid rosybrown; */
-      width: fit-content;
+      width: 60%;
     }
 
   li::before{
@@ -144,5 +145,7 @@ form#form_login input{
 .btn-create{
     text-decoration: underline;
     color: dimgrey;
+    display: inline-block;
+    font-size: 16px;
 }
 

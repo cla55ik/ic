@@ -38,10 +38,19 @@ class Crud{
                  * Выводим категорию 
                  *  $level * 25 - отступ, $level - хранит текущий уровень вложености (0,1,2..)
                  */
-                
-                echo "<li>" . $value->name . "<div class='btn-update' id='btn_update' onclick='updateData(\"{$value->id}\",\"{$value->name}\")'>Обновить</div><div class='btn-delete' id='btn_delete' onclick='deleteData(\"{$value->id}\",\"{$value->name}\")'>Удалить</div></li>";
                 $currid = $value->id;
-                echo "<div class='btn-create'  id='btn_create' onclick='createData(\"{$currid}\")'>Добавить</div>";
+                $next = $value->id +1;
+                echo "<li>" .$value->name . "<div class='btn-update' id='btn_update' onclick='updateData(\"{$value->id}\",\"{$value->name}\")'>Обновить</div><div class='btn-delete' id='btn_delete' onclick='deleteData(\"{$value->id}\",\"{$value->name}\")'>Удалить</div> <div class='btn-create'  id='btn_create' onclick='createData(\"{$currid}\")'>Добавить</div> </li><span>+</span>";
+                // if(isset($this->category_arr[$next])){
+                    
+                // }
+                // else{
+                //     echo "<li>" . $value->name . "<div class='btn-update' id='btn_update' onclick='updateData(\"{$value->id}\",\"{$value->name}\")'>Обновить</div><div class='btn-delete' id='btn_delete' onclick='deleteData(\"{$value->id}\",\"{$value->name}\")'>Удалить</div> <div class='btn-create'  id='btn_create' onclick='createData(\"{$currid}\")'>Добавить</div> </li>";
+                // }
+                
+                
+                
+                // echo ;
                 $level++; //Увеличиваем уровень вложености
                 //Рекурсивно вызываем этот же метод, но с новым $parent_id и $level
                 
