@@ -31,7 +31,9 @@ class Crud{
 
     public function outTree($parentid, $level) {
         if (isset($this->category_arr[$parentid])) { //Если категория с таким parent_id существует
-            echo "<ul >";
+            if ($parentid != 0) {
+                echo "<ul class='hidden'>";
+            }
             //echo "<div class='btn-create'  id='btn_create' onclick='createData(\"{$parentid}\")'>ДобавитьГз</div>";
             foreach ($this->category_arr[$parentid] as $value) { //Обходим ее
                 /**
@@ -40,10 +42,11 @@ class Crud{
                  */
                 $currid = $value->id;
                 $next = $value->id +1;
-                echo "<li>" .$value->name . "<div class='btn-update' id='btn_update' onclick='updateData(\"{$value->id}\",\"{$value->name}\")'>Обновить</div><div class='btn-delete' id='btn_delete' onclick='deleteData(\"{$value->id}\",\"{$value->name}\")'>Удалить</div> <div class='btn-create'  id='btn_create' onclick='createData(\"{$currid}\")'>Добавить</div> </li><span>+</span>";
+                echo "<li>" .$value->name . "<div class='btn-update' id='btn_update' onclick='updateData(\"{$value->id}\",\"{$value->name}\")'>Обновить</div><div class='btn-delete' id='btn_delete' onclick='deleteData(\"{$value->id}\",\"{$value->name}\")'>Удалить</div> <div class='btn-create'  id='btn_create' onclick='createData(\"{$currid}\")'>Добавить</div><span>+</span>";
                 // if(isset($this->category_arr[$next])){
-                    
+                   
                 // }
+                // print_r( $value);
                 // else{
                 //     echo "<li>" . $value->name . "<div class='btn-update' id='btn_update' onclick='updateData(\"{$value->id}\",\"{$value->name}\")'>Обновить</div><div class='btn-delete' id='btn_delete' onclick='deleteData(\"{$value->id}\",\"{$value->name}\")'>Удалить</div> <div class='btn-create'  id='btn_create' onclick='createData(\"{$currid}\")'>Добавить</div> </li>";
                 // }
@@ -60,20 +63,23 @@ class Crud{
                 
             }
             
-            echo "</ul>";
+            echo "</ul></li>";
         }
     }
 
     public function outTreeLight($parentid, $level) {
         if (isset($this->category_arr[$parentid])) { //Если категория с таким parent_id существует
-            echo "<ul >";
+            if ($parentid != 0) {
+                echo "<ul class='hidden'>";
+            }
+            
             foreach ($this->category_arr[$parentid] as $value) { //Обходим ее
                 /**
                  * Выводим категорию 
                  *  $level * 25 - отступ, $level - хранит текущий уровень вложености (0,1,2..)
                  */
                 
-                echo "<li>" .$value->name . "</li><span>+</span>";
+                echo "<li>" .$value->name . "<span>+</span>";
                 
                 $level++; //Увеличиваем уровень вложености
                 //Рекурсивно вызываем этот же метод, но с новым $parent_id и $level
@@ -82,7 +88,7 @@ class Crud{
                 
                 $level--; //Уменьшаем уровень вложености
             }
-            echo "</ul>";
+            echo "</ul></li>";
         }
     }
 

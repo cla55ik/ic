@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
        
  
-    
+   
     
     
     let tree = document.getElementById('tree');
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
           console.log(childrenContainer);
           if (!childrenContainer) return; // нет детей
     
-          childrenContainer.hidden = !childrenContainer.hidden;
+          childrenContainer.classList.toggle('hidden');
         }
     
     });

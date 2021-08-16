@@ -50,11 +50,18 @@ form#form_login input{
 }
 
 .tree span:hover {
-    font-weight: bold;
+    background-color: darkblue;
   }
 
   .tree span {
+      font-size: 12px;
     cursor: pointer;
+    background-color: blue;
+    color: white;
+    border-radius: 50px;
+    padding: 3px 6px;
+    margin-left: 15px;
+    height:auto;
   }
 
   .modal-wrapper{
@@ -109,14 +116,15 @@ form#form_login input{
 
 
 
-  ul li { list-style-type: none; }
+  li { list-style-type: none; }
+  ul { list-style-type: none; }
 
   li {
-      display: inline-block;
+      /* display: inline-block; */
       font-size: 22px;
       margin-top: 10px;
       /* border-top:1px solid rosybrown; */
-      width: 60%;
+      width: fit-content;
     }
 
   li::before{
