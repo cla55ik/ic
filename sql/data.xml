@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.9.5
+- https://www.phpmyadmin.net
+-
+- Хост: 127.0.0.1:3306
+- Время создания: Авг 16 2021 г., 16:10
+- Версия сервера: 10.4.14-MariaDB-cll-lve
+- Версия PHP: 7.2.34
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="u193192659_ic" collation="utf8mb4_unicode_ci" charset="utf8mb4">
+            <pma:table name="data">
+                CREATE TABLE `data` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `name` varchar(11) COLLATE utf8mb4_unicode_ci NOT NULL,
+                  `parentid` int(11) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - База данных: 'u193192659_ic'
+    -->
+    <database name="u193192659_ic">
+        <!-- Таблица data -->
+        <table name="data">
+            <column name="id">1</column>
+            <column name="name">Автомобили</column>
+            <column name="parentid">0</column>
+        </table>
+        <table name="data">
+            <column name="id">2</column>
+            <column name="name">BMW</column>
+            <column name="parentid">1</column>
+        </table>
+        <table name="data">
+            <column name="id">3</column>
+            <column name="name">Audi</column>
+            <column name="parentid">1</column>
+        </table>
+        <table name="data">
+            <column name="id">4</column>
+            <column name="name">Mercedes</column>
+            <column name="parentid">1</column>
+        </table>
+        <table name="data">
+            <column name="id">5</column>
+            <column name="name">4 series</column>
+            <column name="parentid">2</column>
+        </table>
+        <table name="data">
+            <column name="id">6</column>
+            <column name="name">5 series</column>
+            <column name="parentid">2</column>
+        </table>
+        <table name="data">
+            <column name="id">7</column>
+            <column name="name">6 series</column>
+            <column name="parentid">2</column>
+        </table>
+        <table name="data">
+            <column name="id">8</column>
+            <column name="name">X series</column>
+            <column name="parentid">2</column>
+        </table>
+        <table name="data">
+            <column name="id">19</column>
+            <column name="name">A4</column>
+            <column name="parentid">3</column>
+        </table>
+        <table name="data">
+            <column name="id">20</column>
+            <column name="name">WV</column>
+            <column name="parentid">1</column>
+        </table>
+        <table name="data">
+            <column name="id">21</column>
+            <column name="name">Мото</column>
+            <column name="parentid">0</column>
+        </table>
+        <table name="data">
+            <column name="id">23</column>
+            <column name="name">Suzuki</column>
+            <column name="parentid">21</column>
+        </table>
+        <table name="data">
+            <column name="id">24</column>
+            <column name="name">425</column>
+            <column name="parentid">5</column>
+        </table>
+    </database>
+</pma_xml_export>

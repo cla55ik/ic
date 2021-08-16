@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.9.5
+- https://www.phpmyadmin.net
+-
+- Хост: 127.0.0.1:3306
+- Время создания: Авг 16 2021 г., 16:10
+- Версия сервера: 10.4.14-MariaDB-cll-lve
+- Версия PHP: 7.2.34
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="u193192659_ic" collation="utf8mb4_unicode_ci" charset="utf8mb4">
+            <pma:table name="users">
+                CREATE TABLE `users` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `user` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
+                  `password` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - База данных: 'u193192659_ic'
+    -->
+    <database name="u193192659_ic">
+        <!-- Таблица users -->
+        <table name="users">
+            <column name="id">1</column>
+            <column name="user">admin</column>
+            <column name="password">21232f297a57a5a743894a0e4a801fc3</column>
+        </table>
+        <table name="users">
+            <column name="id">2</column>
+            <column name="user">ivan</column>
+            <column name="password">00d2deda5e28e7ed9805f310e680fac9</column>
+        </table>
+    </database>
+</pma_xml_export>
